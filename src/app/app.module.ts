@@ -10,18 +10,27 @@ import { TopicCardComponent } from './topic-card/topic-card.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { CardComponent } from './card/card.component';
+import { ListViewComponent } from './list-view/list-view.component';
+import { TileViewComponent } from './tile-view/tile-view.component';
+import { FilteredActionDataComponent } from './filtered-action-data/filtered-action-data.component';
+import {MatCardModule} from '@angular/material/card';
 @NgModule({
   declarations: [
     AppComponent,
     FilterSectionComponent,
     HeaderSectionComponent,
     FooterSectionComponent,
-    TopicCardComponent
+    TopicCardComponent,
+    CardComponent,
+    ListViewComponent,
+    TileViewComponent,
+    FilteredActionDataComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MatCardModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
