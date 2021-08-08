@@ -1,0 +1,72 @@
+
+
+.flex-container{
+    display: flex;
+    background-color: red;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex-item{
+    display: flex;
+    border: 1px solid #000;
+    height: 100px;
+    flex-grow: 1;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.card-container{
+    display: block;
+    width: 100%;
+    background-color: #FFFF00;
+
+  
+
+}
+.clearfix::after{
+    content: ' ';
+    clear:both;
+    display: table;
+}
+.card-item{
+    display: block;
+    width: calc(16.6% - 1px);
+    background-color: red;
+    border-right: 1px solid #000;
+    height: 100px;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 100px;
+}
+.pull-left{
+    float:left;
+}
+
+@media screen and (max-width:1024px) and (min-width:768px){
+
+    .card-item{
+        display: block;
+        width: calc(33.3% - 1px);
+        background-color: orange;
+    }
+}
+
+@media screen and (max-width:768px) and (min-width:300px){
+
+    .card-item{
+        display: block;
+        width: calc(50% - 1px);
+        background-color: violet;
+    }
+}
+@media screen and (max-width:300px){
+
+    .card-item{
+        display: block;
+        width: calc(50% - 1px);
+        background-color: orange;
+    }
+}
