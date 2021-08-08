@@ -15,6 +15,8 @@ import { ListViewComponent } from './list-view/list-view.component';
 import { TileViewComponent } from './tile-view/tile-view.component';
 import { FilteredActionDataComponent } from './filtered-action-data/filtered-action-data.component';
 import {MatCardModule} from '@angular/material/card';
+import { StoreModule } from '@ngrx/store';
+import { reducers, metaReducers } from './reducers';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +39,10 @@ import {MatCardModule} from '@angular/material/card';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    StoreModule.forRoot(reducers, {
+      metaReducers
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
