@@ -1,0 +1,25 @@
+$border-color: #2a2a2a;
+
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    min-height: 50px;
+    border-bottom: 1px solid $border-color;
+    align-items: stretch;
+}
+
+.left-section{
+    display: flex;
+    flex-grow: 8;
+}
+
+.right-section{
+    display: flex;
+    border-left: 1px solid $border-color;
+    flex-grow: 1;
+}
+
+.left-section, .right-section{
+    align-items: center;
+    padding: 5px;
+}

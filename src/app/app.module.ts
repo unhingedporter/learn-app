@@ -14,7 +14,6 @@ import { CardComponent } from './card/card.component';
 import { ListViewComponent } from './list-view/list-view.component';
 import { TileViewComponent } from './tile-view/tile-view.component';
 import { FilteredActionDataComponent } from './filtered-action-data/filtered-action-data.component';
-import {MatCardModule} from '@angular/material/card';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 @NgModule({
@@ -32,7 +31,6 @@ import { reducers, metaReducers } from './reducers';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatCardModule,
     ServiceWorkerModule.register('ngsw-worker.js', {
       enabled: environment.production,
       // Register the ServiceWorker as soon as the app is stable
